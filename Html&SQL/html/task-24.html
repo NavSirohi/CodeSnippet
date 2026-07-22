@@ -1,12 +1,44 @@
 <!DOCTYPE html>
-<html><body>
-<h1 align="center">Online User Registration</h1>
-<form>
-First Name: <input type="text"><br><br>Last Name: <input type="text"><br><br>Email: <input type="email"><br><br>
-Username: <input type="text"><br><br>Password: <input type="password"><br><br>Confirm Password: <input type="password"><br><br>
-Date of Birth: <input type="date"><br><br>Gender: <input type="radio" name="g">Male <input type="radio" name="g">Female<br><br>
-Country: <select><option>India</option><option>USA</option><option>UK</option></select><br><br>
-Address:<br><textarea rows="4" cols="30"></textarea><br><br>
-<input type="submit" value="Register"> <input type="reset" value="Reset">
-</form>
-</body></html>
+<html>
+<head>
+    <title>New User Registration Form</title>
+</head>
+<body>
+
+    <h1>New User Registration Form</h1>
+
+    <form>
+
+        <label>Username:</label>
+        <input type="text" name="username"><br><br>
+
+        <label>E-mail Address:</label>
+        <input type="email" name="email" placeholder="name@domain.com"><br><br>
+
+        <label>Date of Birth:</label>
+        <input type="date" name="dob"><br><br>
+
+        <label>HTML Experience Years:</label>
+        0
+        <input type="range" name="experience" min="0" max="100">
+        100 years.
+        <br><br>
+
+        <label>Number of Children:</label>
+        <input type="number" name="children" min="0" max="20" value="0"><br><br>
+
+        <label>Personal Page URL:</label>
+        <input type="url" name="website" placeholder="http://domain.com"><br><br>
+
+        <label>Registration Renewal Month:</label>
+        <input type="month" name="renewal"><br><br>
+
+        <input type="submit" value="Submit">
+        <br><br>
+
+        <input type="reset" value="Clear">
+
+    </form>
+
+</body>
+</html>

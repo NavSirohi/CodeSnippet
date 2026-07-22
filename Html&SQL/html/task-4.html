@@ -1,12 +1,111 @@
 <!DOCTYPE html>
-<html><body>
-<h2 align="center">Student Form</h2>
+<html>
+<head>
+    <title>Employee Registration Form</title>
+</head>
+<body>
+
+<center>
+    <h1 style="color:red;">👔 Employee Registration Form</h1>
+</center>
+
 <form>
-Name: <input type="text"><br><br>
-Class: <input type="text"><br><br>
-Gender: <input type="radio" name="g">Male <input type="radio" name="g">Female<br><br>
-Subjects: <input type="checkbox">HTML <input type="checkbox">DBMS<br><br>
-Address:<br><textarea rows="4" cols="30"></textarea><br><br>
-<input type="submit" value="Submit"> <input type="reset" value="Reset">
+<table align="center" cellpadding="6">
+
+<tr>
+    <td></td>
+    <td>
+        <input type="radio" name="title" checked> Mr.
+        <input type="radio" name="title"> Mrs.
+        <input type="radio" name="title"> Ms.
+    </td>
+</tr>
+
+<tr>
+    <td>First Name</td>
+    <td><input type="text" placeholder="First Name"></td>
+</tr>
+
+<tr>
+    <td>Last Name</td>
+    <td><input type="text" placeholder="Last Name"></td>
+</tr>
+
+<tr>
+    <td>Mail Address1</td>
+    <td><input type="text"></td>
+</tr>
+
+<tr>
+    <td>Mail Address2</td>
+    <td><input type="text"></td>
+</tr>
+
+<tr>
+    <td>City</td>
+    <td><input type="text"></td>
+</tr>
+
+<tr>
+    <td>State</td>
+    <td>
+        <select>
+            <option>Gujarat</option>
+            <option>Madhya Pradesh</option>
+            <option>Maharashtra</option>
+            <option>Delhi</option>
+            <option>Rajasthan</option>
+        </select>
+    </td>
+</tr>
+
+<tr>
+    <td>Zip</td>
+    <td><input type="text"></td>
+</tr>
+
+<tr>
+    <td>Upload Photo</td>
+    <td><input type="file"></td>
+</tr>
+
+<tr>
+    <td>E-Mail</td>
+    <td><input type="email"></td>
+</tr>
+
+<tr>
+    <td>Mobile</td>
+    <td><input type="tel" placeholder="+91"></td>
+</tr>
+
+<tr>
+    <td valign="top">Languages Known</td>
+    <td>
+        <input type="checkbox" checked> Gujarati <br>
+        <input type="checkbox" checked> Hindi <br>
+        <input type="checkbox" checked> English <br>
+        <input type="checkbox"> Marathi
+    </td>
+</tr>
+
+<tr>
+    <td valign="top">Additional Information</td>
+    <td>
+        <textarea rows="5" cols="25" placeholder="Optional"></textarea>
+    </td>
+</tr>
+
+<tr>
+    <td></td>
+    <td>
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+    </td>
+</tr>
+
+</table>
 </form>
-</body></html>
+
+</body>
+</html>

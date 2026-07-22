@@ -1,6 +1,59 @@
 <!DOCTYPE html>
-<html>
-<frameset cols="20%,60%,20%">
-<frame src="task-16-left.html"><frame src="task-16-middle.html"><frame src="task-16-right.html">
-</frameset>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Frames Example</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+        }
+
+        iframe {
+            border: 1px solid black;
+        }
+
+        .left {
+            width: 20%;
+        }
+
+        .center {
+            width: 60%;
+        }
+
+        .right {
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+
+    <iframe class="left"
+        srcdoc="
+        <h2 align='center'>Contents</h2>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Courses</li>
+            <li>Gallery</li>
+            <li>Contact</li>
+        </ul>">
+    </iframe>
+
+    <iframe class="center"
+        srcdoc="
+        <h2 align='center'>Body of Page</h2>
+        <p>This is the main content area of the webpage.</p>
+        <p>Here you can display text, images, tables, or other information.</p>">
+    </iframe>
+
+    <iframe class="right"
+        srcdoc="
+        <h2 align='center'>Remarks</h2>
+        <p>Remarks or notifications can be displayed here.</p>">
+    </iframe>
+
+</body>
 </html>
