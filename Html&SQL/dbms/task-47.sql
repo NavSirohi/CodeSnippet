@@ -1,0 +1,1 @@
+SELECT m.employee_id, m.first_name, m.last_name, COUNT(e.employee_id) AS employees_under_manager FROM employees m LEFT JOIN employees e ON m.employee_id = e.manager_id GROUP BY m.employee_id, m.first_name, m.last_name;

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo Elements</title>
+
+    <style>
+        p::first-letter {
+            font-size: 35px;
+            color: red;
+            font-weight: bold;
+        }
+
+        p::first-line {
+            color: blue;
+            font-style: italic;
+        }
+
+        p::before {
+            content: "👉 ";
+            color: green;
+            font-size: 20px;
+        }
+
+        p::after {
+            content: " ✔";
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>CSS Pseudo Elements Example</h2>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, voluptate.
+    </p>
+
+</body>
+</html>

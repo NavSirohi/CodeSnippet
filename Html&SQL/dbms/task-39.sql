@@ -1,0 +1,1 @@
+SELECT d.department_name, COUNT(e.employee_id) AS total FROM departments d JOIN employees e ON d.department_id = e.department_id GROUP BY d.department_name HAVING COUNT(e.employee_id) >= 5 ORDER BY d.department_name;
