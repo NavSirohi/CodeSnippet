@@ -1,0 +1,3 @@
+using System;
+class Rectangle { private double length = 1, width = 1; public bool SetLength(double value) { if (value <= 0 || value >= 20) return false; length = value; return true; } public bool SetWidth(double value) { if (value <= 0 || value >= 20) return false; width = value; return true; } public double GetLength() => length; public double GetWidth() => width; public double Area() => length * width; public double Perimeter() => 2 * (length + width); }
+class Program { static void Main() { Rectangle r = new Rectangle(); r.SetLength(5.5); r.SetWidth(3); Console.WriteLine($"Area: {r.Area()}, Perimeter: {r.Perimeter()}"); } }

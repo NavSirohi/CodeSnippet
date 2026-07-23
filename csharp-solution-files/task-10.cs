@@ -1,0 +1,6 @@
+using System;
+class Worker { public string Name { get; set; } public int WorkingHours { get; set; } public Worker(string name, int hours) { Name = name; WorkingHours = hours; } public virtual void Print() => Console.WriteLine($"{Name}, hours: {WorkingHours}"); }
+class Employee : Worker { public string Department { get; set; } public decimal Salary { get; set; } public Employee(string n, int h, string d, decimal s) : base(n, h) { Department = d; Salary = s; } public override void Print() => Console.WriteLine($"Employee: {Name}, {Department}, {Salary:C}"); }
+class Manager : Worker { public int ManagedEmployees { get; set; } public int ProjectsInCharge { get; set; } public Manager(string n, int h, int e, int p) : base(n, h) { ManagedEmployees = e; ProjectsInCharge = p; } public override void Print() => Console.WriteLine($"Manager: {Name}, manages {ManagedEmployees}, projects: {ProjectsInCharge}"); }
+class Project { public string Name { get; set; } public double Progress { get; set; } public Project(string name, double progress) { Name = name; Progress = progress; } }
+class Program { static void Main() { Worker[] workers = { new Employee("Anil", 40, "IT", 60000), new Manager("Sara", 45, 8, 3) }; foreach (Worker worker in workers) worker.Print(); Project project = new Project("Portal", 65); Console.WriteLine($"{project.Name}: {project.Progress}%"); } }

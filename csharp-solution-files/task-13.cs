@@ -1,0 +1,3 @@
+using System;
+class SavingsAccount { private decimal savingBalance; private static decimal annualInterest; public SavingsAccount(decimal balance) => savingBalance = balance; public static void ModifyInterest(decimal rate) => annualInterest = rate; public void MonthlyInterest() => savingBalance += savingBalance * annualInterest / 12; public decimal Balance => savingBalance; }
+class Program { static void Main() { SavingsAccount saver1 = new SavingsAccount(30000), saver2 = new SavingsAccount(50000); SavingsAccount.ModifyInterest(.05m); saver1.MonthlyInterest(); saver2.MonthlyInterest(); Console.WriteLine($"Saver 1: {saver1.Balance:C}\nSaver 2: {saver2.Balance:C}"); } }

@@ -1,0 +1,3 @@
+using System;
+class Result { public int RollNo; public string Name = ""; public int[] Marks = new int[3]; public void Input() { Console.Write("Roll no: "); RollNo = int.Parse(Console.ReadLine()!); Console.Write("Name: "); Name = Console.ReadLine() ?? ""; for (int i = 0; i < 3; i++) { Console.Write($"Mark {i + 1}: "); Marks[i] = int.Parse(Console.ReadLine()!); } } public int Total() => Marks[0] + Marks[1] + Marks[2]; public double Avg() => Total() / 3.0; public void Show() => Console.WriteLine($"{RollNo} - {Name}; Total: {Total()}, Average: {Avg():F2}"); }
+class Program { static void Main() { Result r = new Result(); r.Input(); r.Show(); } }

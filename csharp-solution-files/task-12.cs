@@ -1,0 +1,4 @@
+using System;
+abstract class Restaurant { protected string Name; protected Restaurant(string name) => Name = name; public void PrintName() => Console.WriteLine(Name); public abstract decimal TotalPrice(decimal mealPrice); public abstract string MenuItems(); public abstract string Location(); }
+class McDonalds : Restaurant { private readonly string location; private readonly bool playPlace; public McDonalds(string name, string location, bool hasPlayPlace) : base(name) { this.location = location; playPlace = hasPlayPlace; } public override decimal TotalPrice(decimal mealPrice) => mealPrice * 1.06m; public override string MenuItems() => "Burger, fries, drink"; public override string Location() => location; public bool HasPlayPlace() => playPlace; }
+class Program { static void Main() { McDonalds m = new McDonalds("McDonalds", "Mumbai", true); m.PrintName(); Console.WriteLine($"Location: {m.Location()}, Total: {m.TotalPrice(250):C}, Play place: {m.HasPlayPlace()}"); } }

@@ -1,0 +1,5 @@
+using System;
+class Employee { public string Name; public Employee(string name) => Name = name; public virtual decimal Earnings() => 0; }
+class SalariedEmployee : Employee { public decimal MonthlySalary; public SalariedEmployee(string name, decimal salary) : base(name) => MonthlySalary = salary; public override decimal Earnings() => MonthlySalary; }
+class CommissionEmployee : Employee { public decimal Sales, CommissionRate; public CommissionEmployee(string name, decimal sales, decimal rate) : base(name) { Sales = sales; CommissionRate = rate; } public decimal CalculateCommission() => Sales * CommissionRate; public override decimal Earnings() => CalculateCommission(); }
+class EmployeeTest { static void Main() { SalariedEmployee employee = new SalariedEmployee("Ravi", 45000); CommissionEmployee agent = new CommissionEmployee("Meera", 100000, .08m); Console.WriteLine($"{employee.Name}: {employee.Earnings():C}"); Console.WriteLine($"{agent.Name} commission: {agent.CalculateCommission():C}"); } }
